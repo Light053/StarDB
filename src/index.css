@@ -3,6 +3,8 @@
 	src: local('Starjedi'),
 		url('./font/Starjedi.ttf') format('truetype');
 	font-weight: bold;
+	font-weight: normal;
+
 }
 
 .list-group-item,
