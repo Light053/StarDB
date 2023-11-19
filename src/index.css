@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Star-Jedi';
+	src: local('Starjedi'),
+		url('./font/Starjedi.ttf') format('truetype');
+	font-weight: bold;
+}
+
+.list-group-item,
+.select,
+li,
+.title-header {
+	font-family: 'Star-Jedi';
+}
