@@ -8,6 +8,8 @@
 .list-group-item,
 .select,
 li,
-.title-header {
+.title-header,
+.list-header-item,
+.name {
 	font-family: 'Star-Jedi';
 }
