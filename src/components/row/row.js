@@ -1,5 +1,7 @@
-import './row.css'
+// Импорт стилей
+import './row.css';
 
+// Функциональный компонент для отображения строки с двумя блоками
 const Row = ({ left, right }) => {
 	return (
 		<div className="person-info ">
@@ -11,7 +13,7 @@ const Row = ({ left, right }) => {
 				{right}
 			</div>
 		</div>
-	)
+	);
 }
 
-export default Row
+export default Row;

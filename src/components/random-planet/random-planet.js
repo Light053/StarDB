@@ -1,17 +1,21 @@
+// Импорт необходимых зависимостей, компонентов и стилей
 import React, { useState, useEffect } from 'react';
 import './random-planet.css';
 import Spinner from '../spinner/spinner';
 import withSwapiService from '../hoc-helpers/with-swapi-service';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
+// Компонент для отображения случайной планеты
 const RandomPlanet = ({ swapiService }) => {
-
+	// Состояние для интервала обновления планеты
 	const [updateInterval, setUpdateInterval] = useState(3000);
+
+	// Проверка типа пропса
 	RandomPlanet.propTypes = {
 		updateInterval: PropTypes.number
 	}
 
-	// Состояние компонента, представляющее информацию о текущей планете
+	// Состояние для хранения информации о планете
 	const [planet, setPlanet] = useState({
 		name: null,
 		population: null,
@@ -24,34 +28,33 @@ const RandomPlanet = ({ swapiService }) => {
 	// Функция для установки нового состояния компонента с информацией о планете
 	const newPlanet = (planet) => {
 		setPlanet(planet);
-
 	};
 
-	// Функция для обновления информации о планете, вызывается каждые 3 секунды
-
+	// Функция для обновления информации о планете
 	const updatePlanet = async () => {
-		// Генерируем случайный идентификатор планеты от 2 до 18
+		// Генерация случайного идентификатора планеты от 2 до 18
 		const newId = Math.floor(Math.random() * 17) + 2;
 
 		try {
-			// Получаем информацию о новой планете с использованием сервиса SwapiService
+			// Получение информации о новой планете с использованием сервиса SwapiService
 			const planetInfo = await swapiService.getPlanet(newId);
-			// Вызываем функцию newPlanet для обновления состояния компонента
+			// Вызов функции newPlanet для обновления состояния компонента
 			newPlanet(planetInfo);
 		} catch (err) {
-			// Обрабатываем ошибку при запросе к API
+			// Обработка ошибки при запросе к API
 			console.error(err);
 		}
 	};
 
+	// Эффект, выполняющийся при монтировании и размонтировании компонента
 	useEffect(() => {
 		// Первоначальная загрузка информации о планете при монтировании компонента
 		updatePlanet();
 
-		// Запускаем updatePlanet каждые 3 секунды с использованием setInterval
+		// Запуск updatePlanet каждые 3 секунды с использованием setInterval
 		const intervalId = setInterval(updatePlanet, updateInterval);
 
-		// Очищаем интервал при размонтировании компонента
+		// Очистка интервала при размонтировании компонента
 		return () => clearInterval(intervalId);
 	}, []); // Пустой массив зависимостей, чтобы эффект выполнился только при монтировании и размонтировании компонента
 
@@ -64,6 +67,7 @@ const RandomPlanet = ({ swapiService }) => {
 		)
 	}
 
+	// Отображение компонента с информацией о случайной планете
 	return (
 		<div className="random-planet jumbotron rounded">
 			<div className="planet-info">
