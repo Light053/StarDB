@@ -18,21 +18,23 @@
 }
 
 .item-list li.name {
-	font-family: 'Star Jedi', sans-serif;
 	font-size: 20px;
 	letter-spacing: 2px;
-	color: #ffe81f;
+	color: #f6ff00;
 	border: none;
 }
 
-.item-group-item {
-	text-align: center;
-	width: 100%;
+.name {
+	font-family: 'Star Jedi';
 }
 
-.list-group-item.name {
+.list-group-item,
+.name {
 	position: relative;
 	overflow: hidden;
+	text-align: center;
+	width: 100%;
+
 }
 
 .btn-list {

@@ -28,7 +28,7 @@ const ItemList = ({ onSelectedItem, getData, renderItem }) => {
 		return arr.map(item => {
 			const label = renderItem(item);
 			return (
-				<li key={item.id} onClick={() => onSelectedItem(item.id)} className="list-group-item">
+				<li key={item.id} onClick={() => onSelectedItem(item.id)} className="list-group-item name">
 					{label}
 				</li>
 			);

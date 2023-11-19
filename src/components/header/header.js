@@ -12,16 +12,16 @@ const Header = () => {
 			</h3>
 			<ul className="d-flex">
 				<li className='list-header-item'>
-					<Link className='list-header-item' to="/people/">People</Link>
+					<Link to="/people/">People</Link>
 				</li>
 				<li className='list-header-item'>
-					<Link className='list-header-item' to="/planets/">Planets</Link>
+					<Link to="/planets/">Planets</Link>
 				</li>
 				<li className='list-header-item'>
-					<Link className='list-header-item' to="/starships/">Starships</Link>
+					<Link to="/starships/">Starships</Link>
 				</li>
 			</ul>
-		</div>
+		</div >
 	);
 };
 

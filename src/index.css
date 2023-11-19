@@ -3,23 +3,10 @@
 	src: local('Starjedi'),
 		url('./font/Starjedi.ttf') format('truetype');
 	font-weight: normal;
-
 }
 
-.list-group-item,
-.select,
-li,
-.title-header,
+.name,
 .list-header-item,
-.name {
+.title-header {
 	font-family: 'Star-Jedi';
-}
-
-.list-header-item {
-	font-family: 'Star-Jedi';
-	font-weight: normal;
-}
-
-.list-group-item {
-	font-weight: normal;
 }
