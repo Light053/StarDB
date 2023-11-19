@@ -1,0 +1,70 @@
+.header {
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #333;
+	border-bottom: 2px solid #635a00;
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+
+.header h3 {
+	margin: 0;
+	font-family: 'Star Jedi', sans-serif;
+	font-size: 32px;
+	color: white;
+}
+
+.header a {
+	text-decoration: none;
+	color: #d6c41b;
+	transition: color 0.3s ease-in-out;
+}
+
+.header a:hover {
+	color: #ffe816;
+}
+
+.header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.header li {
+	margin-right: 20px;
+}
+
+.header li:last-child {
+	margin-right: 0;
+}
+
+.header li a {
+	font-family: 'Star Jedi', sans-serif;
+	font-size: 1.2em;
+}
+
+@media (max-width: 500px) {
+	.header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header h3 {
+		font-size: 1.8rem;
+		/* Новый размер шрифта при ширине меньше 500px */
+	}
+
+	.header li {
+		font-size: 0.8rem;
+		/* Новый размер шрифта при ширине меньше 500px */
+	}
+
+	.header ul {
+		padding-top: 10px;
+	}
+}

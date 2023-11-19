@@ -1,0 +1,31 @@
+.person-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+
+}
+
+.person-details-info {
+	width: 60%;
+}
+
+.list {}
+
+@media (max-width: 1210px) {
+	.person-details-info {
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	.person-info {
+		flex-direction: column;
+	}
+
+
+	.item-list-person,
+	.person-details-info {
+		padding: 0 15px;
+		width: 100%;
+	}
+}

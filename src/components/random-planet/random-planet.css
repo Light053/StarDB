@@ -1,0 +1,79 @@
+.random-planet {
+	display: flex;
+	flex-direction: column;
+	/* Переключаемся на вертикальное расположение при уменьшении экрана */
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #333;
+	/* Более светло-серый фон */
+	color: #fff;
+
+}
+
+.spiner {
+	padding: 0 0 0 -200px;
+}
+
+.planet-info {
+	display: flex;
+	margin-left: 20px;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.planet-image {
+	border-radius: 50%;
+	max-width: 300px;
+	/* Увеличьте максимальную ширину фото */
+	transition: transform 0.3s ease-in-out;
+	/* Добавляем анимацию для плавного перехода */
+}
+
+.planet-image:hover {
+	transform: scale(1.1);
+	/* Увеличиваем размер фото при наведении */
+}
+
+.title {
+	font-size: 48px;
+	font-weight: 800;
+	padding: 0 0 0 50px;
+}
+
+.list-group-item {
+	font-size: 18px;
+	background-color: transparent;
+	border: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.term {
+	font-weight: bold;
+}
+
+/* Если нужно, добавьте анимацию перехода для более плавного визуального эффекта */
+.list-group-item {
+	transition: background-color 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+	background-color: #555;
+	/* Цвет фона при наведении */
+}
+
+/* Медиа-запрос для управления стилями при уменьшении экрана */
+@media (max-width: 768px) {
+	.title {
+		padding: 20px
+	}
+
+	.planet-info {
+		flex-direction: column;
+	}
+
+	.planet-image {
+		max-width: 100%;
+		/* Фото будет занимать 100% ширины в мобильном виде */
+	}
+}

@@ -1,0 +1,60 @@
+.item-list {
+	list-style-type: none;
+	margin: 11px 0 0 0;
+	color: #000000;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.item-list li {
+	padding: 10px;
+	margin: 5px 0;
+	background-color: #333;
+	border-radius: 0px;
+	cursor: pointer;
+	display: flex;
+	max-width: 460px;
+	flex-wrap: wrap;
+}
+
+.item-list li.name {
+	font-family: 'Star Jedi', sans-serif;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: #ffe81f;
+	border: none;
+}
+
+.item-group-item {
+	text-align: center;
+	width: 100%;
+}
+
+.list-group-item.name {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-list {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	color: #ffe81f;
+
+}
+
+.btn-list:after {
+	content: '';
+	position: absolute;
+	background: linear-gradient(90deg, rgba(109, 109, 109, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.1s ease-in-out;
+}
+
+.btn-list:hover:after,
+.btn-list:focus:after {
+	opacity: 1;
+}

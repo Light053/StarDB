@@ -1,0 +1,18 @@
+.button-for-redirect {
+	background-color: #ffe81f;
+	color: #000;
+	padding: 10px 20px;
+	font-size: 24px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	transition: background-color 0.3s ease;
+	margin: 25px 0;
+	font-family: 'Star Jedi', sans-serif;
+
+}
+
+.button-for-redirect:hover {
+	background-color: #f7d000;
+	/* Цвет при наведении */
+}

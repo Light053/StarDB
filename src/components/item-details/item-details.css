@@ -1,0 +1,66 @@
+.item-details {
+	display: flex;
+	margin-top: 15px;
+	flex-direction: row;
+	padding: 10px;
+}
+
+.spinnerForItem {
+	display: inline-block;
+	text-align: center;
+}
+
+.name-item {
+	font-size: 34px;
+	padding-bottom: 10px;
+	color: white;
+	font-weight: 700;
+}
+
+.list-group-item {
+	color: white;
+
+}
+
+.item-details .item-image {
+	width: 40%;
+	height: 40%;
+	border-radius: 10px;
+	display: flex;
+}
+
+.select {
+	padding-top: 20px;
+	color: rgb(251, 255, 20);
+	font-family: 'Star Jedi', sans-serif;
+}
+
+@media (max-width: 650px) {
+	.item-details {
+		flex-direction: column;
+	}
+
+	.item-image {
+		align-self: center;
+		/* Центрируем изображение по вертикали при ширине экрана менее 400px */
+		width: 100%;
+		/* Устанавливаем ширину на 100% для полного заполнения */
+		height: auto;
+		/* Автоматический расчет высоты для сохранения пропорций */
+	}
+}
+
+.term {
+	font-size: 18px;
+}
+
+.error-block {
+	margin: 50px 0 0 0;
+}
+
+.error-message.star-wars {
+	font-family: 'Star Jedi', sans-serif;
+
+	color: yellow;
+
+}
