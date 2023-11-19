@@ -2,10 +2,11 @@
 	max-width: 1400px;
 	margin: 0 auto;
 	text-align: center;
+	padding-bottom: 30px;
 }
 
 .welcome {
 	font-family: 'Star Jedi', sans-serif;
 	color: #ffe81f;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 }
