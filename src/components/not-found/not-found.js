@@ -6,7 +6,7 @@ const NotFound = () => {
 		<div>
 			<h2 className="select">PAGE NOT FOUND :(</h2>
 			<div className='button'>
-				<button onClick={() => navigate('/')} className="button-for-redirect">
+				<button onClick={() => navigate('/')} className="button-for-redirect select">
 					Go to home page
 				</button>
 			</div>
